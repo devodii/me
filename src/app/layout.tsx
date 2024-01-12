@@ -1,32 +1,24 @@
 import type { Metadata } from "next";
+import { Space_Grotesk } from "next/font/google";
+import * as React from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Emmanuel Odii",
-  description: "Full stack developer",
+  description: "Full stack developer & Builder in public",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const font = Space_Grotesk({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
+export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="bg-main-gray text-white opacity-90">{children}</body>
+      <body className={`${font.className} bg-main-gray text-white opacity-90`}>
+        {props.children}
+      </body>
     </html>
   );
 }
