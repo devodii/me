@@ -1,6 +1,6 @@
 export function Header() {
   return (
-    <header className="w-full flex items-center justify-between">
+    <header className="w-full flex items-center justify-between px-4 lg:px-0">
       <div>@devodii</div>
 
       <nav>
