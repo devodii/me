@@ -5,6 +5,11 @@ export function Header() {
 
       <nav>
         <ul className="flex gap-4 items-center">
+           <li className="hover:underline hover:underline-offset-2">
+            <a href="https://miniature-acorn-fac.notion.site/CV-Resume-60801a81592e4292ab2a0190e7e3c29c" target="_blank">
+              resume
+            </a>
+          </li>
           <li className="hover:underline hover:underline-offset-2">
             <a href="https://medium.com/@emmanuelodii80" target="_blank">
               blog
