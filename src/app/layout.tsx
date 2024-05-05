@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import * as React from "react";
 import "./globals.css";
+import { Layout } from "@/components/layout";
 
 export const metadata: Metadata = {
   title: "Emmanuel Odii",
@@ -17,7 +18,7 @@ export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <html lang="en">
       <body className={`${font.className} bg-main-gray text-white opacity-90`}>
-        {props.children}
+        <Layout>{props.children}</Layout>
       </body>
     </html>
   );

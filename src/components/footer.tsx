@@ -11,7 +11,7 @@ const links = [
 export function Footer() {
   const date = new Date().getFullYear();
   return (
-    <footer className="fixed bottom-8 w-full max-w-4xl flex items-center justify-between">
+    <footer className="fixed bottom-0 h-12 md:h-20 bg-main-gray  w-full max-w-4xl flex items-center justify-between px-6">
       <div>Emmanuel Odii © {date}</div>
 
       <ul className="flex gap-2 items-center">
