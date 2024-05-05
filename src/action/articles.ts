@@ -12,6 +12,6 @@ export const getArticles = async () => {
 
     return response;
   } catch (error) {
-    console.error("An errror occured while fetching articles.");
+    console.error("An errror occured while fetching article.");
   }
 };

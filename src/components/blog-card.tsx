@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Props {
   id: string;
   title: string;
@@ -13,16 +15,15 @@ const toDateString = (date: number) =>
     year: "numeric",
   });
 
-export const BlogCard = ({ title, link, createdAt }: Props) => {
+export const BlogCard = ({ id, title, createdAt }: Props) => {
   return (
-    <a
+    <Link
       className="bg-gray-800 rounded-md w-full px-8 py-4 flex flex-col gap-3 hover:scale-105 hover:duration-150"
-      target="_blank"
-      href={link}
+      href={`/blogs/${id}`}
     >
       <h3 className="font-medium text-gray-100 md:text-xl">{title}</h3>
 
       <p className="text-[14px]">{toDateString(createdAt)}</p>
-    </a>
+    </Link>
   );
 };

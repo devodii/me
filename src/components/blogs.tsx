@@ -9,7 +9,7 @@ export const Blogs = async () => {
       {articles?.items.map((article) => (
         <li key={article.id}>
           <BlogCard
-            id={article.id}
+            id={article.id.split("/p/")[1]}
             title={article.title}
             createdAt={article.created}
             link={article.link}
