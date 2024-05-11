@@ -3,6 +3,7 @@ import { Space_Grotesk } from "next/font/google";
 import * as React from "react";
 import "./globals.css";
 import { Layout } from "@/components/layout";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Emmanuel Odii",
@@ -19,6 +20,7 @@ export default function RootLayout(props: React.PropsWithChildren) {
     <html lang="en">
       <body className={`${font.className} bg-main-gray text-white opacity-90`}>
         <Layout>{props.children}</Layout>
+        <Analytics />
       </body>
     </html>
   );
