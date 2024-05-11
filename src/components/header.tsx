@@ -18,10 +18,10 @@ export function Header() {
               resume
             </a>
           </li>
+
+          <li></li>
           <li className="hover:underline hover:underline-offset-2">
-            <a href="https://github.com/devodii" target="_blank">
-              projects
-            </a>
+            <Link href="/projects">projects</Link>
           </li>
         </ul>
       </nav>
