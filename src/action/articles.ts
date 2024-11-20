@@ -1,6 +1,6 @@
-"use server";
+"use server"
 
-import { parse } from "rss-to-json";
+import { parse } from "rss-to-json"
 
 export const getArticles = async () => {
   try {
@@ -8,10 +8,10 @@ export const getArticles = async () => {
       headers: {
         "Content-Type": "application/json",
       },
-    });
+    })
 
-    return response;
+    return response
   } catch (error) {
-    console.error("An errror occured while fetching article.");
+    console.error("An errror occured while fetching article.")
   }
-};
+}
